@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = money_app_api
-build_property.ProjectDir = C:\Users\Jeremy Gifford\source\repos\money-app-api\money-app-api\
+build_property.ProjectDir = C:\money-app\money-app-api\money-app-api\
