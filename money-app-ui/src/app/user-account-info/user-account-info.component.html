@@ -1,0 +1,12 @@
+<div id="account-info" class="container-fluid">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center top-spacer">
+            <app-user-portrait [nameForPortraitLetter]="userService.username" [portraitSettings]="portraitSettings" [portraitColor]="userService.userPortraitColor"></app-user-portrait>
+        </div>
+        <div class="col-12 d-flex justify-content-center align-items-center top-spacer">
+            <div id="username-title">
+                {{userService.username}}
+            </div>
+        </div>
+    </div>
+</div>

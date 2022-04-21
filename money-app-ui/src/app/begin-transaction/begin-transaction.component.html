@@ -1,0 +1,30 @@
+<div id="transaction-screen">
+    <div id="transaction-amount" class="d-flex justify-content-center align-items-center">
+        <div class="currency-number">${{transactionAmount}}</div>
+    </div>
+    <form class="user-search-form">
+        <mat-form-field class="full-width">
+            <span matPrefix> </span>
+            <input (input)="searchUser()" type="tel" matInput placeholder="Search User" name="search"
+                [(ngModel)]="search">
+            <button matSuffix mat-button>
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-form-field>
+        <br />
+    </form>
+
+    <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="viewport">
+        <div *cdkVirtualFor="let user of users" class="example-item">
+            <div id="user-card" class="row" (click)="selectUser(user)">
+                <div class="col-4 h-100 d-flex justify-content-center align-items-center">
+                    <app-user-portrait [nameForPortraitLetter]="user.username" [portraitSettings]="portraitSettings"
+                        [portraitColor]="user.portraitColor"></app-user-portrait>
+                </div>
+                <div class="col-8 h-100 username d-flex justify-content-center align-items-center">
+                    <p>{{user.username}}</p>
+                </div>
+            </div>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>

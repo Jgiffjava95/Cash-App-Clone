@@ -1,0 +1,31 @@
+<div id="transaction-dialog">
+
+    <div class="row">
+        <div class="col-4 h-100 d-flex justify-content-center align-items-center">
+            <app-user-portrait [nameForPortraitLetter]="userService.loggedInUser.username"
+                [portraitSettings]="portraitSettings" [portraitColor]="userService.loggedInUser.portraitColor">
+            </app-user-portrait>
+        </div>
+        <div id="transaction-amount" class="col-4 h-100 d-flex justify-content-center align-items-center">
+            ${{userService.transactionTarget.transactionAmount}}
+        </div>
+        <div class="col-4 h-100 d-flex justify-content-center align-items-center">
+            <app-user-portrait [nameForPortraitLetter]="userService.transactionTarget.username"
+                [portraitSettings]="portraitSettings" [portraitColor]="userService.transactionTarget.portraitColor">
+            </app-user-portrait>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3 class="text-center" mat-dialog-title>Transaction Type</h3>
+        <div #sendButton class="col-6 d-flex justify-content-center align-items-center"><button (click)="setTransactionType(0)">Send</button></div>
+        <div #requestButton class="col-6 d-flex justify-content-center align-items-center"><button (click)="setTransactionType(1)">Request</button></div>
+    </div>
+
+    <div class="row">
+        <h3 class="text-center" mat-dialog-title>Create Transaction?</h3>
+        <button class="col-6 d-flex justify-content-center align-items-center" mat-button
+            mat-dialog-close>Close</button>
+        <div class="col-6 d-flex justify-content-center align-items-center"><button>Submit</button></div>
+    </div>
+</div>

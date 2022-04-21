@@ -1,0 +1,36 @@
+<div id="top-nav">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="left-icons d-flex align-items-center">
+                   <p>${{userService.userWallet}}</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="right-icons d-flex align-items-center">
+                    <a class="a-spacer" (click)="displayTransactionHistory()">
+                         <mat-icon>schedule</mat-icon>
+                    </a>
+                    <a class="a-spacer" (click)="displaySentRequests()">
+                        <mat-icon>outbox</mat-icon>
+                   </a>
+                    <a class="a-spacer" (click)="displayRequests()">
+                         <mat-icon>email</mat-icon>
+                    </a>
+                    <a (click)="displayAccountInfo()">
+                         <mat-icon>account_circle</mat-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #transactionHistory>
+    <app-transaction-history></app-transaction-history>
+</ng-template>
+
+<ng-template #userAccountInfo>
+    <app-user-account-info></app-user-account-info>
+</ng-template>
+

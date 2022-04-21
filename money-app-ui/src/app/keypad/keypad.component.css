@@ -1,0 +1,25 @@
+#key-pad {
+    height: calc(100% - 86px);
+}
+
+#entered-value {
+    height: 50px;
+    color: white;
+    font-size: 50px;
+    margin: 20px;
+}
+
+#ten-key {
+    height: calc(100% - 116px);
+}
+
+.row {
+    height: 100%;
+}
+
+button {
+    color: white;
+    font-size: 30px;
+    background: none;
+    border: none;
+}

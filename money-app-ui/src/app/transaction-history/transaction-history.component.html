@@ -1,0 +1,30 @@
+<div class="container-fluid p-0" *ngIf="userService.userTransactionHistory.length > 0">
+  <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+    <div *cdkVirtualFor="let transaction of userService.userTransactionHistory" class="example-item">
+      <div id="history-card">
+        <div id="transaction-date">
+          {{transaction.dateCreated | date}}
+        </div>
+        <div class="row">
+          <div class="col-3 h-100 d-flex justify-content-center align-items-center">
+            <app-user-portrait [nameForPortraitLetter]="transaction.sender" [portraitSettings]="portraitSettings"
+              [portraitColor]="transaction.senderPortraitColor"></app-user-portrait>
+          </div>
+          <div id="transaction-amount" class="col-3 h-100 d-flex justify-content-center align-items-center">
+            ${{transaction.amount}}
+          </div>
+          <div class="col-3 h-100 d-flex justify-content-center align-items-center">
+            <app-user-portrait [nameForPortraitLetter]="transaction.receiver" [portraitSettings]="portraitSettings"
+              [portraitColor]="transaction.receiverPortraitColor"></app-user-portrait>
+          </div>
+          <div class="col-3 h-100 d-flex justify-content-center align-items-center">
+            <mat-icon [style.color]="stateColor(transaction.state)">{{checkTransactionState(transaction.state)}}</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>
+<div id="no-transactions-warning" class="d-flex justify-content-center align-items-center w-100 h-100" *ngIf="userService.userTransactionHistory.length === 0">
+  You haven't made any transactions.
+</div>

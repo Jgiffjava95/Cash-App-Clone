@@ -1,0 +1,32 @@
+#transaction-dialog {
+    height: 250px;
+    width: 250px;
+}
+
+button {
+    height: 50px;
+    width: 50%;
+    border: none;
+    background-color: transparent;
+}
+
+#transaction-amount {
+    font-size: 25px;
+    color: lightgreen;
+}
+
+.not-selected {
+    color: grey;
+}
+
+.selected {
+    color: white
+}
+
+.row {
+    height: 33.33%;
+}
+
+h3 {
+    margin: 0;
+}

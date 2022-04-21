@@ -1,0 +1,33 @@
+#login {
+    height: 100%;
+    width: 100%;
+  }
+
+.input-box{
+    color: white;
+  }
+
+  .main-button {
+      padding: 12px;
+      font-size: 25px;
+  }
+
+  .cancel-button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  button {
+    background-color: transparent;
+    color: white;
+    border: none;
+  }
+
+  .account-options {
+      padding-top: 24px;
+      display: block;
+      font-size: 15px;
+  }
+  .row {
+    width: 100%;
+  }

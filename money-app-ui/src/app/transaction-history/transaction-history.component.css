@@ -1,0 +1,35 @@
+
+
+.viewport {
+  height: 1000px;
+  width: 100%;
+}
+
+#history-card {
+  height: 100px;
+  border-bottom: 1px solid white;
+}
+
+.row {
+  height: calc(100% - 20px);
+}
+
+#transaction-amount {
+  font-size: 25px;
+  color: lightgreen;
+}
+
+mat-icon {
+  height: 35px;
+  width: 35px;
+  font-size: 35px;
+}
+
+#no-transactions-warning {
+  font-size: 20px;
+}
+
+#transaction-date {
+  margin-top: 10px;
+}
+

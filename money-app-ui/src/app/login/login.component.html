@@ -1,0 +1,18 @@
+<div id="login" class="container-fluid justify-content-center d-flex align-items-center">
+    <div class="row">
+        <mat-form-field class="input-box" appearance="fill">
+            <mat-label>Username</mat-label>
+            <input [(ngModel)]="userData.username" type="text" matInput>
+        </mat-form-field>
+        <mat-form-field *ngIf="!userRecoveringAccount" class="input-box" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input [(ngModel)]="userData.password" type="password" matInput>
+        </mat-form-field>
+        <button class="main-button" (click)="mainButtonClicked()">{{buttonLabel}}</button>
+        <button *ngIf="!userLoggingIn" class="cancel-button" (click)="CancelCurrentTask()">Cancel</button>
+        <div *ngIf='userLoggingIn' class="account-options text-center">
+            <button (click)="createAccount()">Create Account</button>
+            <button (click)="recoverAccount()">Forgot Password?</button>
+        </div>
+    </div>
+</div>

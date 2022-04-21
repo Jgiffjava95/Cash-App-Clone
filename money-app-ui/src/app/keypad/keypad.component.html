@@ -1,0 +1,32 @@
+<app-top-tool-bar></app-top-tool-bar>
+<div id="key-pad">
+
+    <div id="entered-value" class="justify-content-center d-flex align-items-center">
+       ${{ currentValue }}
+    </div>
+
+    <div id="ten-key" class="container">
+        <div class="row">
+            <button (click)="tenKeyInput(1)" class="col-4" mat-button>1</button>
+            <button (click)="tenKeyInput(2)" class="col-4" mat-button>2</button>
+            <button (click)="tenKeyInput(3)" class="col-4" mat-button>3</button>
+            <button (click)="tenKeyInput(4)" class="col-4" mat-button>4</button>
+            <button (click)="tenKeyInput(5)" class="col-4" mat-button>5</button>
+            <button (click)="tenKeyInput(6)" class="col-4" mat-button>6</button>
+            <button (click)="tenKeyInput(7)" class="col-4" mat-button>7</button>
+            <button (click)="tenKeyInput(8)" class="col-4" mat-button>8</button>
+            <button (click)="tenKeyInput(9)" class="col-4" mat-button>9</button>
+            <button (click)="tenKeyInput('.')" class="col-4" mat-button>.</button>
+            <button (click)="tenKeyInput(0)" class="col-4" mat-button>0</button>
+            <button (click)="tenKeyInput('Del')" class="col-4" mat-button>Del</button>
+        </div>
+    </div>
+
+    <div class="text-center bottom">
+        <button (click)="beginTransaction()">Begin Transaction</button>
+    </div>
+</div>
+
+<ng-template #transactionScreen>
+    <app-begin-transaction [transactionAmount]="currentValueToNumber()"></app-begin-transaction>
+</ng-template>

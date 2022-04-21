@@ -1,0 +1,12 @@
+<div *ngIf="appState.isOverlayVisible">
+  <div id="content-overlay">
+    <div id="overlay-controls" class="d-flex align-items-center">
+      <a>
+        <mat-icon (click)="close()">close</mat-icon>
+      </a>
+    </div>
+    <div id="content">
+      <ng-container [ngTemplateOutlet]="appState.overlayTemplate"></ng-container>
+    </div>
+  </div>
+</div>

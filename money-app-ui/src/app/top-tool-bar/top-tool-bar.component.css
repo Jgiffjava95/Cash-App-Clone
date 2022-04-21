@@ -1,0 +1,41 @@
+#top-nav {
+
+}
+
+.row {
+    height: 60px;
+}
+
+.col-6 {
+    padding: 0;
+}
+
+mat-icon {
+    color: white;
+    font-size: 36px;
+}
+
+p {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+}
+
+a {
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+}
+
+.a-spacer {
+    margin-right: 15px;
+}
+
+.right-icons {
+    float: right;
+    height: 100%;
+}
+
+.left-icons {
+    height: 100%;
+}
